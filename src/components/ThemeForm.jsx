@@ -3,7 +3,14 @@ const ThemeForm = ({ handleAddColor }) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
-    handleAddColor({ ...data, id: crypto.randomUUID() });
+    handleAddColor({
+      ...data,
+      id: crypto.randomUUID(),
+      primaryName: null,
+      secondaryName: null,
+      surfaceName: null,
+      backgroundName: null,
+    });
   }
 
   return (

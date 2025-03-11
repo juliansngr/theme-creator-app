@@ -32,10 +32,26 @@ const Theme = ({ colorObject, handlePressDelete }) => {
         </div>
       ) : (
         <div className="flex flex-col gap-5">
-          <Color color={colorObject.primary} text="Primary" />
-          <Color color={colorObject.secondary} text="Secondary" />
-          <Color color={colorObject.surface} text="Surface" />
-          <Color color={colorObject.background} text="Background" />
+          <Color
+            color={colorObject.primary}
+            text="Primary"
+            name={colorObject.primaryName}
+          />
+          <Color
+            color={colorObject.secondary}
+            text="Secondary"
+            name={colorObject.secondaryName}
+          />
+          <Color
+            color={colorObject.surface}
+            text="Surface"
+            name={colorObject.surfaceName}
+          />
+          <Color
+            color={colorObject.background}
+            text="Background"
+            name={colorObject.backgroundName}
+          />
           <button
             className="rounded-xl p-3 text-white bg-red-500"
             onClick={() => {
