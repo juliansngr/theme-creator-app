@@ -1,14 +1,15 @@
 import "./App.css";
 import Header from "./components/Header";
-import Theme from "./components/theme";
+
 import Layout from "./components/utils/layout";
+import CardContainer from "./components/CardContainer";
 
 function App() {
   return (
     <>
       <Layout>
         <Header />
-        <Theme />
+        <CardContainer />
       </Layout>
     </>
   );
