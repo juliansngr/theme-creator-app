@@ -3,7 +3,7 @@ import Color from "./Color";
 import { ChevronDown } from "lucide-react";
 import ColorCollapsed from "./ColorCollapsed";
 
-const Theme = ({ colorObject }) => {
+const Theme = ({ colorObject, handlePressDelete }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   function handleCollapseToggle() {
@@ -36,6 +36,14 @@ const Theme = ({ colorObject }) => {
           <Color color={colorObject.secondary} text="Secondary" />
           <Color color={colorObject.surface} text="Surface" />
           <Color color={colorObject.background} text="Background" />
+          <button
+            className="rounded-xl p-3 text-white bg-red-500"
+            onClick={() => {
+              handlePressDelete(colorObject.id);
+            }}
+          >
+            Delete
+          </button>
         </div>
       )}
     </div>
