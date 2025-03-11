@@ -1,12 +1,10 @@
 import Theme from "./theme";
 
-import { colorDB } from "../../utils/db";
-
-const CardContainer = () => {
+const CardContainer = ({ colorDB }) => {
   return (
     <>
-      {colorDB.map((colorArray, index) => {
-        return <Theme colorArray={colorArray} key={index} />;
+      {colorDB.map((colorObject, index) => {
+        return <Theme colorObject={colorObject} key={index} />;
       })}
     </>
   );
